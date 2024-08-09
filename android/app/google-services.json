@@ -8,28 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:932595220305:android:9a499d829c33a3e5bc5d70",
+        "mobilesdk_app_id": "1:932595220305:android:87a871db0cefe6ecbc5d70",
         "android_client_info": {
-          "package_name": "mobile.wsmb2024.ws02"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyB-yeOmBeTrzu5565Xwr-ojlV8AWBdT0js"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:932595220305:android:567fb6fa47c47373bc5d70",
-        "android_client_info": {
-          "package_name": "wsmb.mobile2024.ws02.drivercp"
+          "package_name": "com.example.drivercp"
         }
       },
       "oauth_client": [],

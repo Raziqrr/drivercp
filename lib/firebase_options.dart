@@ -17,29 +17,17 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
       case TargetPlatform.iOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return windows;
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
@@ -54,10 +42,53 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyB-yeOmBeTrzu5565Xwr-ojlV8AWBdT0js',
-    appId: '1:932595220305:android:567fb6fa47c47373bc5d70',
+    appId: '1:932595220305:android:87a871db0cefe6ecbc5d70',
     messagingSenderId: '932595220305',
     projectId: 'quest-c9433',
     databaseURL: 'https://quest-c9433-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'quest-c9433.appspot.com',
   );
+
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDzLffE9M5Ap-XDG15isApFzLiD-Hjqrv8',
+    appId: '1:932595220305:web:a58aa16dbb6ed6c3bc5d70',
+    messagingSenderId: '932595220305',
+    projectId: 'quest-c9433',
+    authDomain: 'quest-c9433.firebaseapp.com',
+    databaseURL: 'https://quest-c9433-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'quest-c9433.appspot.com',
+    measurementId: 'G-C7E2HWCCR5',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyD3MJq9hOYEBfxRmZhXWpdHVJILxgOnx2Q',
+    appId: '1:932595220305:ios:c7b660449513a195bc5d70',
+    messagingSenderId: '932595220305',
+    projectId: 'quest-c9433',
+    databaseURL: 'https://quest-c9433-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'quest-c9433.appspot.com',
+    iosBundleId: 'wsmb.mobile2024.ws02.drivercp',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyD3MJq9hOYEBfxRmZhXWpdHVJILxgOnx2Q',
+    appId: '1:932595220305:ios:c7b660449513a195bc5d70',
+    messagingSenderId: '932595220305',
+    projectId: 'quest-c9433',
+    databaseURL: 'https://quest-c9433-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'quest-c9433.appspot.com',
+    iosBundleId: 'wsmb.mobile2024.ws02.drivercp',
+  );
+
+  static const FirebaseOptions windows = FirebaseOptions(
+    apiKey: 'AIzaSyDzLffE9M5Ap-XDG15isApFzLiD-Hjqrv8',
+    appId: '1:932595220305:web:3cc9aeb8edd08478bc5d70',
+    messagingSenderId: '932595220305',
+    projectId: 'quest-c9433',
+    authDomain: 'quest-c9433.firebaseapp.com',
+    databaseURL: 'https://quest-c9433-default-rtdb.asia-southeast1.firebasedatabase.app',
+    storageBucket: 'quest-c9433.appspot.com',
+    measurementId: 'G-JYZ9HE876D',
+  );
+
 }

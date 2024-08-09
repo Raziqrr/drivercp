@@ -1,7 +1,7 @@
 /// @Author: Raziqrr rzqrdzn03@gmail.com
 /// @Date: 2024-08-08 12:26:08
 /// @LastEditors: Raziqrr rzqrdzn03@gmail.com
-/// @LastEditTime: 2024-08-08 15:19:52
+/// @LastEditTime: 2024-08-09 23:48:54
 /// @FilePath: lib/pages/details.dart
 /// @Description: 这是默认设置,可以在设置》工具》File Description中进行配置
 
@@ -184,6 +184,19 @@ class _DetailPageState extends State<DetailPage> {
                                             DocumentSnapshot<
                                                 Map<String, dynamic>>>
                                         snapshot) {
+                                  if (snapshot.hasError) {
+                                    return Center(
+                                        child:
+                                            const Text('Something went wrong'));
+                                  }
+
+                                  if (snapshot.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return Center(
+                                        child:
+                                            const CircularProgressIndicator());
+                                  }
+
                                   final passengerData = snapshot.data!.data();
 
                                   if (passengerData != null) {
