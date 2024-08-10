@@ -1,7 +1,7 @@
 /// @Author: Raziqrr rzqrdzn03@gmail.com
 /// @Date: 2024-08-05 23:28:25
 /// @LastEditors: Raziqrr rzqrdzn03@gmail.com
-/// @LastEditTime: 2024-08-10 00:03:22
+/// @LastEditTime: 2024-08-10 00:05:16
 /// @FilePath: lib/pages/home.dart
 /// @Description: 这是默认设置,可以在设置》工具》File Description中进行配置
 
@@ -23,7 +23,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Map<String, dynamic> userData = {};
-  List<String> categories = [];
+  List<String> categories = ["completed", "pending"];
 
   final Stream<QuerySnapshot> _rideStream =
       FirebaseFirestore.instance.collection('Rides').snapshots();
